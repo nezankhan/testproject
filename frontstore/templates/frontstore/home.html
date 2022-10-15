@@ -4,13 +4,25 @@
 {% block content %}
 <!--Inset for Loop-->
 
-
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Nezan's Project</h1>
+            <p class="lead text-muted">This is Nezan's Portfolio. Welcome to Nezan's Project</p>
+            <p>
+                <a href="#" class="btn btn-primary my-2">Call our agents to place order</a>
+                <a href="#" class="btn btn-info my-2">Check Order Status</a>
+                <a href="{% url 'blog-home' %}" class="btn btn-info my-2">Leave Feedback</a>
+            </p>
+        </div>
+    </div>
+</section>
 
 
 <div class="album py-5 bg-light">
-    
+
     <div class="container">
-        
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for item in inventory %}
             <div class="col">
@@ -28,7 +40,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-secondary">Add To Cart</button>
-                                
+
                             </div>
                             <small class="text-muted">9 mins</small>
                         </div>
@@ -37,9 +49,9 @@
             </div>
             {% endfor %}
         </div>
-        
+
     </div>
-    
+
 </div>
 
 {% endblock content %}
