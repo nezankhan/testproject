@@ -36,9 +36,27 @@ ul {
 .content-section {
     background: #ffffff;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid #161515;
     border-radius: 3px;
     margin-bottom: 20px;
+    border-width: 2px;
+    width: 500px;
+    height: 250px;
+  
+  align-content: left;
+  position: relative;
+  left: 30%;
+  top: 200px;
+}
+
+div.buttonGoback {
+    background-position:right 1px;
+    left:2px;
+    padding:0px;
+    position:relative;
+    top:0px;
+    width:1px;
+    height:1px;
 }
 
 .article-title {

@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .models import Inventory, PurchaseOrders
+from .models import Inventory, PurchaseOrders, SaleOrders
 # Create your views here.
 
 def home(request):
     context = {
-        'inventory': Inventory.objects.all()
+        'inventory': Inventory.objects.all(),
+        
     }
     return render(request,'frontstore/home.html',context)
 
@@ -15,6 +16,6 @@ def staff(request):
 def orders(request):
     
     context = {
-        'inventory': PurchaseOrders.objects.all()
+        'saleorders':SaleOrders.objects.all(),
     }
     return render(request,'frontstore/orders.html',context)

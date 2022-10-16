@@ -1,38 +1,31 @@
 {% extends "frontstore/staff.html" %}
-<link href="/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
 {% block order %}
+
 
 <div>Hi this works</div>
 <div class="bd-example center vertical-center">
     <table class="table table-hover table-dark" style="width: 50%; height: 100%;">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Firsts</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Order Number</th>
+                <th scope="col">Item</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Shipped Date</th>
             </tr>
         </thead>
         <tbody>
+            {% for orders in saleorders %}
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row">{{orders.order_number}}</th>
+                <td>{{orders.item}}</td>
+                <td>{{orders.quantity}}</td>
+                <td>{{orders.shipped_date}}</td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
+            {% endfor %}
+
+
         </tbody>
     </table>
 </div>
