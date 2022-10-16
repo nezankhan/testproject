@@ -24,7 +24,7 @@
             <a class="active" href="{% url 'home'%}">Home</a>
             <a class="active" href="{% url 'blog-about' %}">About</a>
             <a href="#news">News</a>
-            <a href="#contact">Staff Portal</a>
+            <a href="{% url 'staff' %}">Staff Portal</a>
             <div class="topnav-right">
                 {% if user.is_authenticated %}
                 <a href="{% url 'profile' %}">Profile</a>
